@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/Principal/Productos/reset.css">            
+    <link rel="stylesheet" href="/Principal/Productos/style-all.css">
+    
+    
+    
+    <title>Contacto</title>
+</head>
+<body>
+
+    <header> 
+        <div class="caja">  
+            <h1><img src="/Principal/Imagenes/logo_tv-removebg-preview.png" alt="Logo de TV Cristalinas"></h1>
+            <nav>
+                <ul>
+                    <li> <a href="/Principal/Primera-pagina-web.html">Home</a></li> 
+                    <li><a href="/Principal/Productos/Productos.html">Productos</a></li>
+                    <li><a href="/Principal/Contactos/contactos.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--------- Formulario -------->
+
+    <main>
+        <form>  <!-- representa una sección de un documento que contiene controles interactivos que permiten a un usuario enviar información a un servidor web. -->
+            <label for="nombreapellido">Nombre y Apellido</label>
+            <input type="text" id="nombreapellido" class="input-padron" required>      <!-- caja de texto , con el id relaciona el label con el input para cuando demos click en Nombre y Apellido se active la caja de texto-->
+            
+            <label for="correoelectronico">Correo Electronico</label>         <!-- La etiqueta <label> es una etiqueta para la entrada de datos para el <input>. -->
+            <input type="email" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com">  <!-- required es para que el campo de texto sea obligatorio llenar -->
+
+            <label for="telefono">Telefono</label>
+            <input type="tel" id="telefono" class="input-padron" required placeholder="(XX) XXXX XXXX">           <!-- Se referencia con una clase para poder alterarlos en css en especifico -->
+            <!-- Con placeholder nos da una guia en el campo de texto para saber como se debe ingresar la informacion -->
+            
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" cols="70" rows="10" class="input-padron" required></textarea>
+
+            <!------------------------------------------------------------------>
+
+            <fieldset>  <!-- Con fieldset se agrupa todos los datos o items que hacen referencia a la misma informacion,  organizador permitido en grupos los campos de un formulario. -->
+
+                <legend>¿Como le gustaria que lo contactemos?</legend>
+
+            <label><input type="radio" name="contacto" value="email">Email</label> <!-- El atributo name permite a un script acceder a su contenido. Es preferible utilizar los dos atributos con el mismo identificador, por motivos de compatibilidad. -->
+            
+            <label><input type="radio" name="contacto" value="telefono">Telefono</label> <!-- Con name se da el nombre para todas las opciones para agruparlos y esto hace que solo se pueda seleccionar una opcion -->
+
+            <label><input type="radio" name="contacto" value="whatsapp" checked>Whatsapp</label> <!--  La propiedad name solo se puede “completar” una vez, es por eso que, cuando seleccionamos uno de los ítems, se anula el otro, manteniendo solamente uno seleccionado. -->
+            
+            </fieldset>
+
+            <!------------------------------------------------------------------------>
+
+            <fieldset>
+                <legend>Seleccione en que horario le gustaria ser atendido</legend>  <!-- El elemento < leyenda > ( leyenda ) crea un título para un grupo de los campos (<fieldset>) de un formulario. -->
+            <select>
+                <option>Mañana</option>  <!--  La estructura de la etiqueta <select> está compuesta de uno o más <option>. -->
+                <option>Tarde</option>
+                <option>Noche</option>
+            </select>
+            </fieldset>
+
+            <label class="checkbox"><input type="checkbox" checked>¿Le gustaria recibir novedades de TV Cristalinas?</label>  <!-- Otra manera de relacionar un input con un label es escribir el input dentro del label, de esa manera no se usaria un id -->
+            <!-- Con "checked" selecciona la option por defecto -->
+
+            <input type="submit" class="enviar">   <!-- Boton enviar -->
+        </form>
+
+        <!------------------------------------ Tabla de horario -------------------------------->
+
+        <table>         <!--La etiqueta table, representa la tabla.-->
+            <thead>     <!--La etiqueta thead, representa el encabezado de la tabla.-->
+
+                <tr>                    <!-- Utilizamos la etiqueta <tr> para marcar la fila de una tabla.-->
+                    <th>Días</th>
+                    <th>Horario</th>    
+                </tr>
+
+            </thead>
+
+            <tbody>                     <!--La etiqueta tbody, representa el cuerpo de la tabla.-->
+                <tr>
+                    <td>Lunes</td>            <!--La etiqueta td, representa la celda de la tabla.-->
+                    <td>8am - 6pm</td>
+                </tr>
+    
+                <tr>
+                    <td>Martes</td>
+                    <td>8am - 6pm</td>
+                </tr>
+    
+                <tr>
+                    <td>Miercoles</td>
+                    <td>8am - 6pm</td>
+                </tr>
+    
+                <tr>
+                    <td>Jueves</td>
+                    <td>8am - 6pm</td>
+                </tr>
+    
+                <tr>
+                    <td>Viernes</td>
+                    <td>8am - 6pm</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!------------------------------------ Tabla de horario (fin) -------------------------------->
+
+    </main>
+
+    <!--------------Formulario (fin) ----------------->
+
+    <footer>
+        <img class="piePagina" src="/Principal/Imagenes/logo.png" alt="Logo de TV Cristalinas en blanco">
+        <p class="copyright">&Copy right TV Cristalinas - 2022</p>
+    </footer>
+    
+</body>
+</html>
